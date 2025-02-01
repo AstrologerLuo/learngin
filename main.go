@@ -11,5 +11,9 @@ func main(){
 		c.String(200,"值%v","你好gin")
 	})
 
-	r.Run()
+	r.Get("/news", func(c *gin.Context){
+		c.String(200,"我是新闻页面")
+	})
+
+	r.Run(":8000")
 }
